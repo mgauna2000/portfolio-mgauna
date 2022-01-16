@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Cover from './components/Cover';
 import './App.css';
 import Navbar from './components/Navbar';
+import About from './components/About';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     <div className="App">
       <Navbar isScrolling={scrollHeight} />
       <Cover />
+      <About />
     </div>
   );
 }

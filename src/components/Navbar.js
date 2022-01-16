@@ -1,10 +1,13 @@
 import React from 'react'
 import '../styles/Navbar.css'
 
-function Navbar() {
+const Navbar = ({ isScrolling }) => {
+    const toTheTop = () => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth"})
+    }
     return (
-        <nav className='navbar'>
-            <div className='navbar-logo'>Martin</div>
+        <nav className={`navbar ${isScrolling > 20 ? "scrolling" : null} `}>
+            <div className='navbar-logo' onClick={toTheTop}>Martin</div>
         </nav>
     )
 }
